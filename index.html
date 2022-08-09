@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/style.css'>
+</head>
+<body>
+    <div class="main">
+        <h1>Jogo advinhe o número</h1>
+
+        <div id="content-left">
+            <p>
+                Quero que você crie um jogo simples do tipo adivinhe um número. Ele deve gerar um número aleatório de 1 a 100, 
+                depois desafiar o jogador a adivinhar o número em 10 rodadas. A cada rodada deve ser dito ao jogador se ele 
+                está certo ou errado, se estiver errado, deve ser dito se o palpite é muito baixo ou muito alto. Também deve 
+                ser mostrado ao jogador os números que ele tentou adivinhar anteriormente. O jogo termina se o jogador acertar 
+                o número ou acabarem o número de tentativas. Quando o jogo acabar, deve ser dado ao jogador
+                a opção de jogar novamente.
+            </p>
+        </div>
+
+        <div id="content-center">
+            <label for="numero">Numero:</label>
+            <input type="text" id="numero" name="numero">
+            <input type="submit" id="btn-enviar" value="Enviar" onclick="jogo()">
+
+        </div>
+        <div id="content-resultados">
+            <p id="tentativas">
+                
+            </p>
+            <p id="certo-errado">
+
+            </p>
+            <p id="dica">
+
+            </p>
+        </div>
+
+    </div>
+    
+    <script src="js/event.js">
+
+    </script>
+</body>
+</html>
