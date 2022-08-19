@@ -5,45 +5,51 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Page Title</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel='stylesheet' type='text/css' media='screen' href='css/style.css'>
 </head>
 <body>
-    <div class="main">
-        <h1>Jogo advinhe o número</h1>
+    <div id="content" class="container orange accent-1 center-align">
+        
 
-        <div id="content-left">
-            <p>
-                Quero que você crie um jogo simples do tipo adivinhe um número. Ele deve gerar um número aleatório de 1 a 100, 
-                depois desafiar o jogador a adivinhar o número em 10 rodadas. A cada rodada deve ser dito ao jogador se ele 
-                está certo ou errado, se estiver errado, deve ser dito se o palpite é muito baixo ou muito alto. Também deve 
-                ser mostrado ao jogador os números que ele tentou adivinhar anteriormente. O jogo termina se o jogador acertar 
-                o número ou acabarem o número de tentativas. Quando o jogo acabar, deve ser dado ao jogador
-                a opção de jogar novamente.
-            </p>
-        </div>
-
-        <div id="content-center">
-            <label for="numero">Numero:</label>
-            <input type="text" id="numero" name="numero">
-            <input type="submit" id="btn-enviar" value="Enviar" onclick="jogo()">
-
-        </div>
-        <div id="content-resultados">
-            <p id="tentativas">
+        <div class="row grey-text text-darken-3">
+            <form class="col s12">
+                <h3>Jogo advinhe o número</h3>
+                <div class="row">
+                    <div class="input-field col s4 offset-s4">
+                        <label class="grey-text text-darken-3" for="numero">Numero:</label>
+                        <input type="text" id="numero" name="numero">
+                    </div>
+                    <div class="col s12 m4 l3 offset-l6">
+                        <button id="btn-enviar" class="btn orange darken-4 waves-effect waves-light" type="button" name="action" onclick="jogo()">Enviar
+                            <i class="material-icons right">send</i>
+                        </button>
+                    </div>
+                    
+                </div>
                 
+                
+            </form>
+
+        </div>
+        <div class="container divider orange darken-2"></div>
+        <div class="container" id="content-resultados">
+            <p id="tentativas">
+                Palpites:
             </p>
             <p id="certo-errado">
-
+                
             </p>
             <p id="dica">
-
+            
             </p>
         </div>
 
     </div>
     
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="js/event.js">
-
-    </script>
+  </script>
 </body>
 </html>

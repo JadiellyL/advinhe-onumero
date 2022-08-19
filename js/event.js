@@ -12,25 +12,26 @@ function jogo(){
     if(rodadas < 10){
         rodadas = rodadas + 1;
         console.log("rodadas" + rodadas);
-        palpite.innerHTML = "";
         if(palpite === numeroAleatorio){
             reultado.innerHTML = "Parabens voce acertou! "
             listaPalpites.innerHTML += " " + palpite + " ";
-            palpiteBaixo_ouAlto.innerHTML = "";
+            document.querySelector("#numero").value = "";
+           palpiteBaixo_ouAlto.innerHTML = "";
         }else{
             listaPalpites.innerHTML += " " + palpite + " ";
             reultado.innerHTML = "Numero errado";
+            document.querySelector("#numero").value = "";
             if(palpite < numeroAleatorio){
                 palpiteBaixo_ouAlto.innerHTML = "Seu palpite esta muito baixo" ;
             }else{
-                palpiteBaixo_ouAlto.innerHTML = "Seu palpite esta muito alto"
+                palpiteBaixo_ouAlto.innerHTML = "Seu palpite esta muito alto";
             }
             
         }
     }else{
         palpite.disabled = true;
         reultado.innerHTML = "Jogo encerrado!"
-        console.log(rodadas + "fim de jogo");
+        alert(rodadas + " rodadas! fim de jogo");
     }
 
 }
